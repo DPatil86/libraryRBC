@@ -21,7 +21,7 @@ public class LibraryService {
 		Library x = l.save(lib);
 		if(x != null)
 		{
-			return "Book with id:"+  x.getBook_id() + " is added successfully";
+			return "Book with id: "+  x.getBook_id() + " is added successfully";
 		}
 		return null;
 	}
@@ -38,7 +38,7 @@ public class LibraryService {
 		Library x = l.save(lib);
 		if(x != null)
 		{
-			return "Book with id: "+  x.getBook_id() + "updated successfully";
+			return "Book with id: "+  x.getBook_id() + " updated successfully";
 		}
 		else {
 			return "Book updation failed for id";
@@ -47,23 +47,6 @@ public class LibraryService {
 
 	public String deleteBook(int id) {
 		l.deleteById(id);
-		return "Product deleted";
-		/*l.deleteById(id);
-		if(l.findById(id).get() == null) {
-			return "Customer with id: is deleted successfully";
-		}
-		else {
-			return "No customer exists with id: for deletion"; 
-		}*/
-		
-		/*Library x = l.findById(id).get();
-		if(x != null) {
-		l.deleteById(id);
-		return "deleted";
-		}
-		else {
-			return "unsuccessful";
-		}*/
+		return "Product deleted with id: "+id;
 	}
-
 }
